@@ -1,6 +1,7 @@
 # Between the Lines
 
-My album - A static music player website featuring an HTML5 mp3 player with sleek UI.
+**Between the Lines by Hannahbelle Ottone - A static music player website featuring an HTML5 mp3 player with sleek UI.**
+
 [Between the Lines by Hannahbelle Ottone](https://hannahbellesheart.github.io/betweenthelines)
 
 
