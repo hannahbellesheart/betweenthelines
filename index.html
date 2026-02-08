@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Between the Lines - Music Album</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Between the Lines</h1>
+            <p class="subtitle">My Album</p>
+        </header>
+
+        <div class="license-notice">
+            <h2>⚖️ Copyright Notice</h2>
+            <p>All music and audio works contained in this media player are the exclusive proprietary property of the copyright owner. These works are protected by copyright law and international treaties. Unauthorized reproduction, distribution, or use of these works is strictly prohibited and may result in civil and criminal penalties. All rights reserved. These works will always remain the property of the copyright owner.</p>
+        </div>
+
+        <div class="player-container">
+            <div class="album-art">
+                <div class="album-art-placeholder">
+                    <svg width="200" height="200" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="90" fill="#2a2a2a"/>
+                        <circle cx="100" cy="100" r="30" fill="#1a1a1a"/>
+                        <circle cx="100" cy="100" r="10" fill="#3a3a3a"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="track-info">
+                <h2 id="trackTitle">Select a track to play</h2>
+                <p id="trackArtist">Between the Lines</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" id="progressBarFill"></div>
+                    <input type="range" id="progressBar" min="0" max="100" value="0" step="0.1">
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" id="prevBtn" title="Previous Track">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="19 20 9 12 19 4 19 20"></polygon>
+                        <line x1="5" y1="4" x2="5" y2="20"></line>
+                    </svg>
+                </button>
+                <button class="control-btn play-btn" id="playBtn" title="Play">
+                    <svg id="playIcon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <svg id="pauseIcon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                </button>
+                <button class="control-btn" id="nextBtn" title="Next Track">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                        <line x1="19" y1="4" x2="19" y2="20"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="volume-container">
+                <button class="volume-btn" id="volumeBtn" title="Volume">
+                    <svg id="volumeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                    <svg id="mutedIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                </button>
+                <input type="range" id="volumeSlider" min="0" max="100" value="70" step="1">
+            </div>
+        </div>
+
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <div id="playlistContainer" class="playlist-items">
+                <p class="no-tracks">No tracks available. Add MP3 files to the media folder.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Between the Lines. All audio content is proprietary property.</p>
+        </footer>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+    <script src="player.js"></script>
+</body>
+</html>
