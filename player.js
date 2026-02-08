@@ -40,6 +40,16 @@ class MusicPlayer {
             // Add your tracks here, for example:
             // { title: 'Track 1', file: 'media/track1.mp3' },
             // { title: 'Track 2', file: 'media/track2.mp3' },
+             { title: '01. I Like it that Way', file: 'media/01. I Like it that Way.mp3' },
+             { title: '02. Chance to Dance', file: 'media/02. Chance to Dance.mp3' },
+             { title: '03. She Don\'t (Give a Damn About Me)', file: 'media/03. She Don\'t (Give a Damn About Me).mp3' },
+             { title: '04. Rainbow', file: 'media/04. Rainbow.mp3' },
+             { title: '05. Falling Through (Glass Ceilings)', file: 'media/05. Falling Through (Glass Ceilings).mp3' },
+             { title: '06. For Country', file: 'media/06. For Country.mp3' },
+             { title: '07.  Another Pretty Gun (To Start A War)', file: 'media/07.  Another Pretty Gun (To Start A War).mp3' },
+             { title: '08. Between the Lines', file: 'media/08. Between the Lines.mp3' },
+             { title: '09. Tennessee Pearl', file: 'media/09. Tennessee Pearl.mp3' },
+             { title: '10. Between The Lines (Reprise)', file: 'media/10. Between The Lines (Reprise).mp3' }
         ];
 
         if (this.playlist.length > 0) {
