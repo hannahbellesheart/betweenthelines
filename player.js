@@ -151,6 +151,9 @@ class MusicPlayer {
     }
 
     updateProgress() {
+        if (!this.audio.duration || isNaN(this.audio.duration)) {
+            return;
+        }
         const percent = (this.audio.currentTime / this.audio.duration) * 100;
         this.progressBar.value = percent;
         this.progressBarFill.style.width = percent + '%';
@@ -158,6 +161,9 @@ class MusicPlayer {
     }
 
     setProgress(e) {
+        if (!this.audio.duration || isNaN(this.audio.duration)) {
+            return;
+        }
         const percent = e.target.value;
         this.audio.currentTime = (percent / 100) * this.audio.duration;
     }
