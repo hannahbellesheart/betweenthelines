@@ -178,8 +178,8 @@ class AlbumPlayer {
     this.title.textContent = track.title;
     this.resetProgress();
     this.updatePlaylistState();
-    this.currentSource = new URL(`../media/${encodeURIComponent(track.file)}`, document.baseURI).href;
-    this.audio.src = `../media/${encodeURIComponent(track.file)}`;
+    this.currentSource = new URL(`media/${encodeURIComponent(track.file)}`, document.baseURI).href;
+    this.audio.src = `media/${encodeURIComponent(track.file)}`;
     this.audio.load();
     this.setStatus(`Loading: ${track.title}`);
 
