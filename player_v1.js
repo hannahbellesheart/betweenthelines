@@ -11,6 +11,17 @@ const tracks = [
   { title: "10. Between The Lines (Reprise)", file: "10. Between The Lines (Reprise).mp3" }
 ];
 
+// Resolve audio relative to this script, not the current page URL. This keeps
+// media URLs correct if GitHub Pages opens the site without a trailing slash.
+const playerScript = Array.from(document.scripts).find((script) => {
+  try {
+    return new URL(script.src, document.baseURI).pathname.endsWith("/player_v1.js");
+  } catch {
+    return false;
+  }
+});
+const playerScriptUrl = playerScript ? new URL(playerScript.src, document.baseURI) : new URL(document.baseURI);
+
 class AlbumPlayer {
   constructor() {
     this.audio = document.getElementById("audio");
@@ -178,8 +189,8 @@ class AlbumPlayer {
     this.title.textContent = track.title;
     this.resetProgress();
     this.updatePlaylistState();
-    this.currentSource = new URL(`media/${encodeURIComponent(track.file)}`, document.baseURI).href;
-    this.audio.src = `media/${encodeURIComponent(track.file)}`;
+    this.currentSource = new URL(`media/${encodeURIComponent(track.file)}`, playerScriptUrl).href;
+    this.audio.src = this.currentSource;
     this.audio.load();
     this.setStatus(`Loading: ${track.title}`);
 
