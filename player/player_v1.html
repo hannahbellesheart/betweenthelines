@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" data-variant="dark" data-theme="obsidian">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Listen to Between the Lines (The Demos) by Hannahbelle Ottone.">
+  <title>Between the Lines · The Demos</title>
+  <link rel="stylesheet" href="../newsite/css/fonts.css">
+  <link rel="stylesheet" href="../newsite/vendor/phosphor/bold/style.css">
+  <link rel="stylesheet" href="../newsite/vendor/phosphor/duotone/style.css">
+  <link rel="stylesheet" href="../newsite/vendor/phosphor/light/style.css">
+  <link rel="stylesheet" href="../newsite/vendor/phosphor/regular/style.css">
+  <link rel="stylesheet" href="../newsite/vendor/phosphor/thin/style.css">
+  <link rel="stylesheet" href="../newsite/css/tokens.css">
+  <link rel="stylesheet" href="../newsite/css/hbo.css">
+  <link rel="stylesheet" href="player_v1.css">
+  <script src="player_v1.js" defer></script>
+</head>
+<body>
+  <div class="player-app">
+    <header class="player-masthead">
+      <a class="wordmark" href="#main" aria-label="Between the Lines player home">
+        <span class="wordmark-mark" aria-hidden="true">B/L</span>
+        <span class="wordmark-copy"><strong>Between the Lines</strong><small>The demos</small></span>
+      </a>
+      <div class="player-theme-tools">
+        <div class="theme-control">
+          <span class="theme-label">Theme</span>
+          <div class="theme-switch player-theme-switch" role="group" aria-label="Color theme">
+            <button type="button" data-theme-id="crimsonking" title="CrimsonKing" aria-label="CrimsonKing" aria-pressed="false" style="background:linear-gradient(135deg, #ef4444, #f97316)"></button>
+            <button type="button" data-theme-id="solaris" title="Solaris" aria-label="Solaris" aria-pressed="false" style="background:linear-gradient(135deg, #ec4899, #f97316)"></button>
+            <button type="button" data-theme-id="galaxy" title="Galaxy" aria-label="Galaxy" aria-pressed="false" style="background:linear-gradient(135deg, #a855f7, #06b6d4)"></button>
+            <button type="button" data-theme-id="desert" title="Desert" aria-label="Desert" aria-pressed="false" style="background:linear-gradient(135deg, #f59e0b, #dc2626)"></button>
+            <button type="button" data-theme-id="sunset" title="Sunset" aria-label="Sunset" aria-pressed="false" style="background:linear-gradient(135deg, #ef4444, #fbbf24)"></button>
+            <button type="button" data-theme-id="aurora" title="Aurora" aria-label="Aurora" aria-pressed="false" style="background:linear-gradient(135deg, #3b82f6, #0ea5e9)"></button>
+            <button type="button" data-theme-id="teal" title="Teal" aria-label="Teal" aria-pressed="false" style="background:linear-gradient(135deg, #14b8a6, #22d3ee)"></button>
+            <button type="button" data-theme-id="kinetic" title="Kinetic" aria-label="Kinetic" aria-pressed="false" style="background:linear-gradient(135deg, #64748b, #94a3b8)"></button>
+            <button type="button" data-theme-id="northernlight" title="Northern Light" aria-label="Northern Light" aria-pressed="false" style="background:linear-gradient(135deg, #14b8a6, #22d3ee)"></button>
+            <button type="button" data-theme-id="forest" title="Forest" aria-label="Forest" aria-pressed="false" style="background:linear-gradient(135deg, #10b981, #84cc16)"></button>
+            <button type="button" data-theme-id="crimson" title="Crimson" aria-label="Crimson" aria-pressed="false" style="background:linear-gradient(135deg, #ef4444, #f97316)"></button>
+            <button type="button" class="active" data-theme-id="obsidian" title="Obsidian" aria-label="Obsidian" aria-pressed="true" style="background:linear-gradient(135deg, #6366f1, #8b5cf6)"></button>
+            <button type="button" data-theme-id="carbon" title="Carbon" aria-label="Carbon" aria-pressed="false" style="background:linear-gradient(135deg, #71717a, #a1a1aa)"></button>
+            <button type="button" data-theme-id="interstellar" title="Interstellar" aria-label="Interstellar" aria-pressed="false" style="background:linear-gradient(135deg, #6366f1, #06b6d4)"></button>
+          </div>
+        </div>
+        <button class="variant-toggle" id="variant-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" title="Toggle light / dark">
+          <i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="admin-content player-content">
+      <div class="page-header">
+        <div>
+          <h1>Between the Lines</h1>
+          <p>The demos <span aria-hidden="true">·</span> Hannahbelle Ottone</p>
+        </div>
+        <span class="badge primary soft" id="track-count">10 songs</span>
+      </div>
+
+      <div class="player-layout">
+        <section class="panel player-console" aria-labelledby="track-title">
+          <div class="track-summary">
+            <div class="track-summary-meta">
+              <span class="badge primary soft" id="playback-label">Selected track</span>
+              <span class="track-album">Between the Lines · The demos</span>
+            </div>
+            <h2 id="track-title">Choose a song</h2>
+            <p class="track-artist">Hannahbelle Ottone</p>
+          </div>
+
+          <div class="seek-area">
+            <div class="time-row tabular">
+              <span id="current-time">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+            <label class="sr-only" for="seek">Seek through the current track</label>
+            <input id="seek" class="range seek-range" type="range" min="0" max="0" value="0" step="1" disabled aria-valuetext="0:00">
+          </div>
+
+          <div class="transport" role="group" aria-label="Playback controls">
+            <button class="btn btn-ghost btn-icon btn-lg transport-button" id="previous" type="button" aria-label="Play previous track" disabled>
+              <i class="ph ph-skip-back" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-primary btn-icon btn-lg play-button" id="play" type="button" aria-label="Play" disabled>
+              <i class="ph ph-play" id="play-icon" aria-hidden="true"></i>
+              <i class="ph ph-pause" id="pause-icon" aria-hidden="true" hidden></i>
+            </button>
+            <button class="btn btn-ghost btn-icon btn-lg transport-button" id="next" type="button" aria-label="Play next track" disabled>
+              <i class="ph ph-skip-forward" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="volume-row">
+            <button class="btn btn-ghost btn-icon volume-toggle" id="mute" type="button" aria-label="Mute" aria-pressed="false" disabled>
+              <i class="ph ph-speaker-high" id="volume-icon" aria-hidden="true"></i>
+              <i class="ph ph-speaker-slash" id="muted-icon" aria-hidden="true" hidden></i>
+            </button>
+            <label class="sr-only" for="volume">Volume</label>
+            <input id="volume" class="range volume-range" type="range" min="0" max="1" value="0.7" step="0.01" disabled aria-valuetext="70%">
+            <span class="volume-label">Volume</span>
+          </div>
+
+          <p class="player-status" id="player-status" role="status" aria-live="polite" aria-atomic="true">Loading playlist…</p>
+        </section>
+
+        <section class="panel playlist-panel" aria-labelledby="playlist-heading">
+          <div class="panel-head playlist-header">
+            <div>
+              <h2 id="playlist-heading">Tracklist</h2>
+              <p class="sub">Between the Lines · The demos</p>
+            </div>
+            <i class="ph ph-playlist playlist-icon" aria-hidden="true"></i>
+          </div>
+          <ol class="playlist" id="playlist" aria-label="Between the Lines tracklist"></ol>
+        </section>
+      </div>
+    </main>
+
+    <footer class="player-footer">
+      <p class="copyright-heading">&copy; 2026 OT Music (OTM). All audio content is exclusive proprietary property.</p>
+      <p>All music, lyrics, compositions, and audio recordings and content contained in the <strong>“Between the Lines”</strong> compilation are original works and the exclusive intellectual property of <strong>Hannahbelle Ottone</strong>.</p>
+      <p>These works are protected under United States copyright law and applicable international copyright treaties. No part of this compilation may be copied, reproduced, distributed, transmitted, publicly performed, displayed, or otherwise used in any form without prior written permission from the copyright holder.</p>
+      <p>All rights are expressly reserved. Ownership of the music, lyrics, and compositions remains solely and permanently with the author. Unauthorized use may result in civil liability and, where applicable, criminal penalties.</p>
+    </footer>
+  </div>
+
+  <audio id="audio" preload="metadata"></audio>
+</body>
+</html>

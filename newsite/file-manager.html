@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-variant="dark" data-theme="crimsonking">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Manager · Artifacture</title>
+  <meta name="description" content="Operations console">
+  <meta name="generator" content="HBO Suite 2.0.0">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ef4444'/><stop offset='1' stop-color='%23f97316'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='url(%23g)'/><text x='32' y='43' font-family='Arial' font-weight='700' font-size='32' text-anchor='middle' fill='white'>Q</text></svg>">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="vendor/phosphor/bold/style.css">
+  <link rel="stylesheet" href="vendor/phosphor/duotone/style.css">
+  <link rel="stylesheet" href="vendor/phosphor/light/style.css">
+  <link rel="stylesheet" href="vendor/phosphor/regular/style.css">
+  <link rel="stylesheet" href="vendor/phosphor/thin/style.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/hbo.css">
+  <script>(function () { try { var d = document.documentElement, v = localStorage.getItem('hbo-variant'), t = localStorage.getItem('hbo-theme'); if (v && !d.hasAttribute('data-static-variant')) d.setAttribute('data-variant', v); if (t && d.hasAttribute('data-theme')) d.setAttribute('data-theme', t); } catch (e) { } })();</script>
+</head>
+
+<body>
+  <div class="admin" data-sidebar="">
+    <aside class="admin-sidebar" aria-label="Main navigation">
+      <div class="sb-brand">
+        <div class="sb-logo">Qu</div>
+        <div>
+          <div class="sb-title">Artifacture</div>
+          <div class="sb-sub">Operations console</div>
+        </div>
+      </div>
+      <nav class="sb-nav">
+        <div class="sb-group  "><button class="sb-group-btn" type="button"><i
+              class="ph ph-gauge"></i><span>Dashboards</span><i class="caret"></i></button>
+          <div class="sb-items">
+            <div><a class="sb-link " href="index.html" data-page-link="ecommerce"><i
+                  class="ph ph-storefront"></i><span>E-Commerce</span></a><a class="sb-link " href="crm.html"
+                data-page-link="crm"><i class="ph ph-handshake"></i><span>CRM</span></a><a class="sb-link "
+                href="analytics.html" data-page-link="analytics"><i
+                  class="ph ph-chart-line-up"></i><span>Analytics</span></a><a class="sb-link "
+                href="project-management.html" data-page-link="project-management"><i
+                  class="ph ph-kanban"></i><span>Project Management</span></a><a class="sb-link "
+                href="email-marketing.html" data-page-link="email-marketing"><i
+                  class="ph ph-envelope-open"></i><span>Email Marketing</span></a><a class="sb-link " href="crypto.html"
+                data-page-link="crypto"><i class="ph ph-currency-btc"></i><span>Cryptocurrency</span></a><a
+                class="sb-link " href="app-views.html" data-page-link="app-views"><i
+                  class="ph ph-squares-four"></i><span>Application Views</span></a></div>
+          </div>
+        </div>
+        <div class="sb-group open has-active"><button class="sb-group-btn" type="button"><i
+              class="ph ph-squares-four"></i><span>Apps</span><i class="caret"></i></button>
+          <div class="sb-items">
+            <div><a class="sb-link active" href="file-manager.html" data-page-link="file-manager"><i
+                  class="ph ph-folder-open"></i><span>File Manager</span></a><a class="sb-link " href="contacts.html"
+                data-page-link="contacts"><i class="ph ph-address-book"></i><span>Contacts</span></a><a class="sb-link "
+                href="mail.html" data-page-link="mail"><i class="ph ph-envelope-simple"></i><span>Mail</span><span
+                  class="badge pill">2</span></a><a class="sb-link " href="messages.html" data-page-link="messages"><i
+                  class="ph ph-chat-circle-dots"></i><span>Messages</span></a><a class="sb-link " href="photos.html"
+                data-page-link="photos"><i class="ph ph-images"></i><span>Photos</span></a><a class="sb-link "
+                href="todo.html" data-page-link="todo"><i class="ph ph-list-checks"></i><span>Todo Lists</span></a><a
+                class="sb-link " href="calendar.html" data-page-link="calendar"><i
+                  class="ph ph-calendar-blank"></i><span>Calendar</span></a></div>
+          </div>
+        </div>
+        <div class="sb-group  "><button class="sb-group-btn" type="button"><i
+              class="ph ph-files"></i><span>Pages</span><i class="caret"></i></button>
+          <div class="sb-items">
+            <div><a class="sb-link " href="invoice.html" data-page-link="invoice"><i
+                  class="ph ph-receipt"></i><span>Invoice</span></a><a class="sb-link " href="pricing.html"
+                data-page-link="pricing"><i class="ph ph-tag"></i><span>Pricing</span></a><a class="sb-link "
+                href="search-results.html" data-page-link="search-results"><i
+                  class="ph ph-magnifying-glass"></i><span>Search Results</span></a><a class="sb-link " href="faq.html"
+                data-page-link="faq"><i class="ph ph-question"></i><span>FAQ</span></a><a class="sb-link "
+                href="team.html" data-page-link="team"><i class="ph ph-users-three"></i><span>Team</span></a><a
+                class="sb-link " href="crud.html" data-page-link="crud"><i class="ph ph-table"></i><span>CRUD &amp;
+                  Tables</span></a></div>
+          </div>
+        </div>
+        <div class="sb-group  "><button class="sb-group-btn" type="button"><i
+              class="ph ph-user-circle"></i><span>User</span><i class="caret"></i></button>
+          <div class="sb-items">
+            <div><a class="sb-link " href="user-profile.html" data-page-link="user-profile"><i
+                  class="ph ph-user"></i><span>Profile</span></a><a class="sb-link " href="user-timeline.html"
+                data-page-link="user-timeline"><i class="ph ph-clock-counter-clockwise"></i><span>Timeline</span></a><a
+                class="sb-link " href="user-photos.html" data-page-link="user-photos"><i
+                  class="ph ph-image"></i><span>User Photos</span></a><a class="sb-link " href="user-connections.html"
+                data-page-link="user-connections"><i class="ph ph-users"></i><span>Connections</span></a><a
+                class="sb-link " href="user-preferences.html" data-page-link="user-preferences"><i
+                  class="ph ph-gear"></i><span>Preferences</span></a></div>
+          </div>
+        </div>
+        <div class="sb-group  "><button class="sb-group-btn" type="button"><i
+              class="ph ph-puzzle-piece"></i><span>Components</span><i class="caret"></i></button>
+          <div class="sb-items">
+            <div><a class="sb-link " href="c-buttons.html" data-page-link="c-buttons"><i
+                  class="ph ph-cursor-click"></i><span>Buttons</span></a><a class="sb-link " href="c-badges.html"
+                data-page-link="c-badges"><i class="ph ph-seal"></i><span>Badges &amp; Chips</span></a><a
+                class="sb-link " href="c-cards.html" data-page-link="c-cards"><i class="ph ph-cards"></i><span>Cards
+                  &amp; Panels</span></a><a class="sb-link " href="c-alerts.html" data-page-link="c-alerts"><i
+                  class="ph ph-warning"></i><span>Alerts &amp; Feedback</span></a><a class="sb-link "
+                href="c-accordion.html" data-page-link="c-accordion"><i class="ph ph-rows"></i><span>Accordion &amp;
+                  Collapse</span></a><a class="sb-link " href="c-carousel.html" data-page-link="c-carousel"><i
+                  class="ph ph-slideshow"></i><span>Carousel</span></a><a class="sb-link " href="c-overlays.html"
+                data-page-link="c-overlays"><i class="ph ph-stack"></i><span>Dropdowns &amp; Overlays</span></a><a
+                class="sb-link " href="c-navigation.html" data-page-link="c-navigation"><i
+                  class="ph ph-compass"></i><span>Navigation</span></a><a class="sb-link " href="c-tables.html"
+                data-page-link="c-tables"><i class="ph ph-table"></i><span>Tables</span></a></div>
+          </div>
+        </div>
+        <div class="sb-group  "><button class="sb-group-btn" type="button"><i
+              class="ph ph-textbox"></i><span>Forms</span><i class="caret"></i></button>
+          <div class="sb-items">
+            <div><a class="sb-link " href="f-elements.html" data-page-link="f-elements"><i
+                  class="ph ph-textbox"></i><span>Form Elements</span></a><a class="sb-link " href="f-input-groups.html"
+                data-page-link="f-input-groups"><i class="ph ph-brackets-square"></i><span>Input Groups</span></a><a
+                class="sb-link " href="f-layouts.html" data-page-link="f-layouts"><i class="ph ph-layout"></i><span>Form
+                  Layouts</span></a><a class="sb-link " href="f-validation.html" data-page-link="f-validation"><i
+                  class="ph ph-check-square"></i><span>Form Validation</span></a><a class="sb-link "
+                href="f-advanced.html" data-page-link="f-advanced"><i
+                  class="ph ph-sliders-horizontal"></i><span>Advanced Controls</span></a></div>
+          </div>
+        </div>
+        <div class="sb-group  "><button class="sb-group-btn" type="button"><i
+              class="ph ph-palette"></i><span>Foundations</span><i class="caret"></i></button>
+          <div class="sb-items">
+            <div><a class="sb-link " href="colors.html" data-page-link="colors"><i
+                  class="ph ph-palette"></i><span>Colors &amp; Tokens</span></a><a class="sb-link "
+                href="typography.html" data-page-link="typography"><i class="ph ph-text-aa"></i><span>Typography &amp;
+                  Fonts</span></a><a class="sb-link " href="icons.html" data-page-link="icons"><i
+                  class="ph ph-shapes"></i><span>Icons</span></a><a class="sb-link " href="charts.html"
+                data-page-link="charts"><i class="ph ph-chart-bar"></i><span>Charts</span></a><a class="sb-link "
+                href="maps.html" data-page-link="maps"><i class="ph ph-globe-hemisphere-west"></i><span>Maps</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="sb-label">Standalone</div><a class="sb-link " href="coming-soon.html"
+          data-page-link="coming-soon"><i class="ph ph-hourglass"></i><span>Coming Soon</span></a><a class="sb-link "
+          href="error-404.html" data-page-link="error-404"><i class="ph ph-warning-circle"></i><span>404</span></a><a
+          class="sb-link " href="error-500.html" data-page-link="error-500"><i
+            class="ph ph-bug"></i><span>500</span></a><a class="sb-link " href="login.html" data-page-link="login"><i
+            class="ph ph-sign-in"></i><span>Login</span></a><a class="sb-link " href="register.html"
+          data-page-link="register"><i class="ph ph-user-plus"></i><span>Register</span></a><a class="sb-link "
+          href="forgot-password.html" data-page-link="forgot-password"><i class="ph ph-key"></i><span>Forgot
+            Password</span></a><a class="sb-link " href="two-factor.html" data-page-link="two-factor"><i
+            class="ph ph-shield-check"></i><span>Two-Factor</span></a><a class="sb-link " href="landing-saas.html"
+          data-page-link="landing-saas"><i class="ph ph-rocket-launch"></i><span>Home</span></a><a class="sb-link "
+          href="landing-app.html" data-page-link="landing-app"><i class="ph ph-device-mobile"></i><span>App
+            Landing</span></a><a class="sb-link " href="landing-agency.html" data-page-link="landing-agency"><i
+            class="ph ph-buildings"></i><span>Agency Landing</span></a><a class="sb-link " href="contact.html"
+          data-page-link="contact"><i class="ph ph-envelope-simple"></i><span>Contact</span></a><a class="sb-link "
+          href="resume.html" data-page-link="resume"><i class="ph ph-identification-card"></i><span>Resume</span></a><a
+          class="sb-link " href="portfolio.html" data-page-link="portfolio"><i
+            class="ph ph-images"></i><span>Portfolio</span></a>
+      </nav>
+      <div class="sb-foot">
+        <div class="media"><span class="avatar sm">MB</span>
+          <div class="media-body">
+            <div class="media-title truncate">Hannahbelle</div>
+            <div class="media-sub">Administrator</div>
+          </div><button class="btn btn-ghost btn-icon btn-sm" data-sb-mini aria-label="Collapse sidebar"
+            data-tip="Collapse" data-tip-pos="right"><i class="ph ph-sidebar-simple"></i></button>
+        </div>
+      </div>
+    </aside>
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <button class="btn btn-ghost btn-icon sb-burger" data-sb-toggle aria-label="Open menu"><i
+            class="ph ph-list"></i></button>
+        <div class="search input-icon"><i class="ph ph-magnifying-glass"></i><input class="input" type="search"
+            placeholder="Search…" aria-label="Search"><kbd class="kbd-hint hide-sm">Ctrl K</kbd></div>
+        <div class="tb-actions">
+          <div class="theme-switch" role="group" aria-label="Theme"><button data-theme-id="crimsonking"
+              title="CrimsonKing" aria-label="CrimsonKing"
+              style="background:linear-gradient(135deg, #ef4444, #f97316)"></button><button data-theme-id="solaris"
+              title="Solaris" aria-label="Solaris"
+              style="background:linear-gradient(135deg, #ec4899, #f97316)"></button><button data-theme-id="galaxy"
+              title="Galaxy" aria-label="Galaxy"
+              style="background:linear-gradient(135deg, #a855f7, #06b6d4)"></button><button data-theme-id="desert"
+              title="Desert" aria-label="Desert"
+              style="background:linear-gradient(135deg, #f59e0b, #dc2626)"></button><button data-theme-id="sunset"
+              title="Sunset" aria-label="Sunset"
+              style="background:linear-gradient(135deg, #ef4444, #fbbf24)"></button><button data-theme-id="aurora"
+              title="Aurora" aria-label="Aurora"
+              style="background:linear-gradient(135deg, #3b82f6, #0ea5e9)"></button><button data-theme-id="teal"
+              title="Teal" aria-label="Teal"
+              style="background:linear-gradient(135deg, #14b8a6, #22d3ee)"></button><button data-theme-id="kinetic"
+              title="Kinetic" aria-label="Kinetic"
+              style="background:linear-gradient(135deg, #64748b, #94a3b8)"></button><button
+              data-theme-id="northernlight" title="Northern Light" aria-label="Northern Light"
+              style="background:linear-gradient(135deg, #14b8a6, #22d3ee)"></button><button data-theme-id="forest"
+              title="Forest" aria-label="Forest"
+              style="background:linear-gradient(135deg, #10b981, #84cc16)"></button><button data-theme-id="crimson"
+              title="Crimson" aria-label="Crimson"
+              style="background:linear-gradient(135deg, #ef4444, #f97316)"></button><button data-theme-id="obsidian"
+              title="Obsidian" aria-label="Obsidian"
+              style="background:linear-gradient(135deg, #6366f1, #8b5cf6)"></button><button data-theme-id="carbon"
+              title="Carbon" aria-label="Carbon"
+              style="background:linear-gradient(135deg, #71717a, #a1a1aa)"></button><button data-theme-id="interstellar"
+              title="Interstellar" aria-label="Interstellar"
+              style="background:linear-gradient(135deg, #6366f1, #06b6d4)"></button></div>
+          <button class="variant-toggle" data-hbo-variant-toggle aria-label="Toggle light / dark"
+            title="Toggle light / dark"><i class="ph ph-moon"></i><i class="ph ph-sun"></i></button>
+          <div class="dropdown"><button class="btn btn-ghost btn-icon has-badge" data-dropdown
+              aria-label="Notifications"><i class="ph ph-bell"></i><span
+                class="badge danger dot badge-pos"></span></button>
+            <div class="dropdown-menu end" style="width:300px">
+              <div class="dropdown-header">Notifications</div>
+              <a class="dropdown-item" href="#"><i class="ph ph-shopping-cart"></i><span>New order #4821</span><span
+                  class="kbd-hint muted">2m</span></a>
+              <a class="dropdown-item" href="#"><i class="ph ph-user-plus"></i><span>3 new sign-ups</span><span
+                  class="kbd-hint muted">1h</span></a>
+              <a class="dropdown-item" href="#"><i class="ph ph-warning"></i><span>Server load 82%</span><span
+                  class="kbd-hint muted">3h</span></a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="#">View all</a>
+            </div>
+          </div>
+          <div class="dropdown"><button class="btn btn-ghost" data-dropdown><span class="avatar xs">MB</span><span
+                class="hide-sm">Mistress</span></button>
+            <div class="dropdown-menu end">
+              <div class="dropdown-header">Signed in</div>
+              <a class="dropdown-item" href="#"><i class="ph ph-user"></i><span>Profile</span></a><a
+                class="dropdown-item" href="#"><i class="ph ph-gear"></i><span>Settings</span></a>
+              <div class="dropdown-divider"></div><a class="dropdown-item danger" href="#"><i
+                  class="ph ph-sign-out"></i><span>Sign out</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="admin-content" id="main">
+        <div class="page-header">
+          <div>
+            <h1>File Manager</h1>
+            <p>18.4 GB of 50 GB used</p>
+          </div>
+          <div class="page-actions"><button class="btn btn"><i class="ph ph-folder-plus"></i><span>New
+                folder</span></button><button class="btn btn-primary"><i
+                class="ph ph-upload-simple"></i><span>Upload</span></button></div>
+        </div>
+        <div class="app-split">
+          <div class="panel stack">
+            <nav class="app-nav" data-select><a class="nav-link active" href="#"><i class="ph ph-house"></i><span>My
+                  files</span><span class="count">1284</span></a><a class="nav-link " href="#"><i
+                  class="ph ph-users"></i><span>Shared with me</span><span class="count">86</span></a><a
+                class="nav-link " href="#"><i class="ph ph-star"></i><span>Starred</span><span
+                  class="count">24</span></a><a class="nav-link " href="#"><i
+                  class="ph ph-clock-counter-clockwise"></i><span>Recent</span><span class="count"></span></a><a
+                class="nav-link " href="#"><i class="ph ph-trash"></i><span>Trash</span><span
+                  class="count">12</span></a></nav>
+            <div class="divider"></div>
+            <div class="h-section">Storage</div>
+            <div class="storage-bar"><span style="width:22%;background:var(--chart-1)"></span><span
+                style="width:9%;background:var(--chart-2)"></span><span
+                style="width:5%;background:var(--chart-3)"></span><span
+                style="width:2%;background:var(--chart-4)"></span></div>
+            <div class="stack-sm">
+              <div class="row between"><span class="row gap-2"><i class="status-dot"
+                    style="background:var(--chart-1)"></i>Documents</span><span class="muted tabular">11.0 GB</span>
+              </div>
+              <div class="row between"><span class="row gap-2"><i class="status-dot"
+                    style="background:var(--chart-2)"></i>Images</span><span class="muted tabular">4.5 GB</span></div>
+              <div class="row between"><span class="row gap-2"><i class="status-dot"
+                    style="background:var(--chart-3)"></i>Video</span><span class="muted tabular">2.5 GB</span></div>
+              <div class="row between"><span class="row gap-2"><i class="status-dot"
+                    style="background:var(--chart-4)"></i>Other</span><span class="muted tabular">0.4 GB</span></div>
+            </div>
+            <div class="dropzone"><i class="ph ph-cloud-arrow-up ico-xl"></i>
+              <p class="mt-2">Drop files to upload</p>
+            </div>
+          </div>
+          <div class="stack">
+            <div class="row between wrap">
+              <ol class="breadcrumb chevron">
+                <li><a href="#">My files</a></li>
+                <li><a href="#">Projects</a></li>
+                <li class="active">HBO Suite</li>
+              </ol>
+              <div class="row">
+                <div class="input-icon"><i class="ph ph-magnifying-glass"></i><input class="input input-sm"
+                    placeholder="Search files"></div>
+                <div class="btn-group" data-toggle="radio"><button class="btn btn-sm btn-icon active"
+                    aria-label="Grid"><i class="ph ph-squares-four"></i></button><button class="btn btn-sm btn-icon"
+                    aria-label="List"><i class="ph ph-list"></i></button></div>
+              </div>
+            </div>
+            <div class="file-grid">
+              <div class="card file-tile folder" tabindex="0"><i class="ph ph-folder"></i>
+                <div class="name truncate">Design assets</div>
+                <div class="meta">148 files</div>
+              </div>
+              <div class="card file-tile folder" tabindex="0"><i class="ph ph-folder"></i>
+                <div class="name truncate">Contracts</div>
+                <div class="meta">22 files</div>
+              </div>
+              <div class="card file-tile pdf" tabindex="0"><i class="ph ph-file-pdf"></i>
+                <div class="name truncate">Brand guide.pdf</div>
+                <div class="meta">4.2 MB</div>
+              </div>
+              <div class="card file-tile img" tabindex="0"><i class="ph ph-file-image"></i>
+                <div class="name truncate">Hero shot.jpg</div>
+                <div class="meta">2.8 MB</div>
+              </div>
+              <div class="card file-tile doc" tabindex="0"><i class="ph ph-file-doc"></i>
+                <div class="name truncate">Q3 report.docx</div>
+                <div class="meta">612 KB</div>
+              </div>
+              <div class="card file-tile zip" tabindex="0"><i class="ph ph-file-zip"></i>
+                <div class="name truncate">Backup.zip</div>
+                <div class="meta">1.4 GB</div>
+              </div>
+              <div class="card file-tile vid" tabindex="0"><i class="ph ph-file-video"></i>
+                <div class="name truncate">Promo.mp4</div>
+                <div class="meta">86 MB</div>
+              </div>
+              <div class="card file-tile doc" tabindex="0"><i class="ph ph-file-code"></i>
+                <div class="name truncate">Tokens.json</div>
+                <div class="meta">18 KB</div>
+              </div>
+              <div class="card file-tile folder" tabindex="0"><i class="ph ph-folder"></i>
+                <div class="name truncate">Invoices</div>
+                <div class="meta">64 files</div>
+              </div>
+              <div class="card file-tile img" tabindex="0"><i class="ph ph-file-image"></i>
+                <div class="name truncate">Avatar set.png</div>
+                <div class="meta">940 KB</div>
+              </div>
+            </div>
+            <section class="panel flush">
+              <div class="panel-head">
+                <div>
+                  <h4>Recent activity</h4>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="table hover">
+                  <thead>
+                    <tr>
+                      <th class="">Name</th>
+                      <th class="">Owner</th>
+                      <th class="">Modified</th>
+                      <th class="num">Size</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="" data-label="Name"><span class="row"><i class="ph ph-file-pdf"></i> Brand
+                          guide.pdf</span></td>
+                      <td class="" data-label="Owner">
+                        <div class="media"><span class="avatar xs c1" title="Ava Thompson">AT</span>
+                          <div class="media-body">
+                            <div class="media-title truncate">Ava Thompson</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="" data-label="Modified"><span class="muted">1h ago</span></td>
+                      <td class="num" data-label="Size">4.2 MB</td>
+                    </tr>
+                    <tr>
+                      <td class="" data-label="Name"><span class="row"><i class="ph ph-file-image"></i> Hero
+                          shot.jpg</span></td>
+                      <td class="" data-label="Owner">
+                        <div class="media"><span class="avatar xs c2" title="Liam Carter">LC</span>
+                          <div class="media-body">
+                            <div class="media-title truncate">Liam Carter</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="" data-label="Modified"><span class="muted">2h ago</span></td>
+                      <td class="num" data-label="Size">2.8 MB</td>
+                    </tr>
+                    <tr>
+                      <td class="" data-label="Name"><span class="row"><i class="ph ph-file-doc"></i> Q3
+                          report.docx</span></td>
+                      <td class="" data-label="Owner">
+                        <div class="media"><span class="avatar xs c3" title="Sofia Martinez">SM</span>
+                          <div class="media-body">
+                            <div class="media-title truncate">Sofia Martinez</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="" data-label="Modified"><span class="muted">3h ago</span></td>
+                      <td class="num" data-label="Size">612 KB</td>
+                    </tr>
+                    <tr>
+                      <td class="" data-label="Name"><span class="row"><i class="ph ph-file-zip"></i> Backup.zip</span>
+                      </td>
+                      <td class="" data-label="Owner">
+                        <div class="media"><span class="avatar xs c4" title="Noah Kim">NK</span>
+                          <div class="media-body">
+                            <div class="media-title truncate">Noah Kim</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="" data-label="Modified"><span class="muted">4h ago</span></td>
+                      <td class="num" data-label="Size">1.4 GB</td>
+                    </tr>
+                    <tr>
+                      <td class="" data-label="Name"><span class="row"><i class="ph ph-file-video"></i> Promo.mp4</span>
+                      </td>
+                      <td class="" data-label="Owner">
+                        <div class="media"><span class="avatar xs c5" title="Mia Johnson">MJ</span>
+                          <div class="media-body">
+                            <div class="media-title truncate">Mia Johnson</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="" data-label="Modified"><span class="muted">5h ago</span></td>
+                      <td class="num" data-label="Size">86 MB</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="admin-footer"><span>© 2026 Artifacture</span><span>Built with HBO Suite</span></footer>
+    </div>
+  </div>
+  <script>window.HBO_ICON_BASE = 'vendor/phosphor/';</script>
+  <script src="js/hbo.js"></script>
+</body>
+
+</html>
